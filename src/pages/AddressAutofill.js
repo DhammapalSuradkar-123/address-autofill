@@ -25,9 +25,9 @@ const AddressForm = () => {
   return (
     <main>
       <div className="wrapper" style={{margin: "100px"}}>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autoComplete="on">
           <div>
-            <label htmlFor="address-line1" style={{display:"inline-block",width:"300px"}}>Address line 123</label>
+            <label htmlFor="address-line1" style={{display:"inline-block",width:"300px"}}>Address line</label>
             <input
               autoComplete="address-line1"
               required
@@ -79,10 +79,10 @@ const AddressForm = () => {
           <div>
             <label htmlFor="country" style={{display:"inline-block",width:"300px"}}>Country</label>
             <input
-              autoComplete="country"
+              autoComplete="country-name"
               type="text"
               id="country"
-              name="country"
+              name="country-name"
               value={formData.country}
               onChange={(e) => handleChange("country", e.target.value)}
             />
