@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const AddressForm = () => {
   const [formData, setFormData] = useState({
-    addressOne: '',
-    city: '',
-    state: '',
-    zip: '',
-    country: '',
+    addressOne: "",
+    city: "",
+    state: "",
+    zip: "",
+    country: "",
   });
 
   const handleChange = (name, value) => {
@@ -18,14 +18,14 @@ const AddressForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted address:', formData);
+    console.log("Submitted address:", formData);
     // you can handle API or state update here
   };
 
   return (
     <main>
-      <div className="wrapper" style={{margin: "100px"}}>
-        <form onSubmit={handleSubmit} autoComplete="on">
+      <div className="wrapper" style={{ margin: "100px" }}>
+        {/* <form onSubmit={handleSubmit} autoComplete="on">
           <div>
             <label htmlFor="address-line1" style={{display:"inline-block",width:"300px"}}>Address line</label>
             <input
@@ -33,7 +33,7 @@ const AddressForm = () => {
               required
               type="text"
               id="address-line1"
-              name="address-line1"
+              name="addressOne"
               value={formData.addressOne}
               onChange={(e) => handleChange("addressOne", e.target.value)}
             />
@@ -92,6 +92,47 @@ const AddressForm = () => {
             <div style={{width: "300px"}} />
             <button type="submit">Save address</button>
           </div>
+        </form> */}
+        <form onSubmit={handleSubmit} autoComplete="on">
+          <input
+            name="addressOne"
+            autoComplete="address-line1"
+            value={formData.addressOne}
+            onChange={(e) => handleChange("addressOne", e.target.value)}
+            required
+            placeholder="123 Main St"
+          />
+          <input
+            name="city"
+            autoComplete="address-level2"
+            value={formData.city}
+            onChange={(e) => handleChange("city", e.target.value)}
+            required
+            placeholder="City"
+          />
+          <input
+            name="state"
+            autoComplete="address-level1"
+            value={formData.state}
+            onChange={(e) => handleChange("state", e.target.value)}
+            placeholder="State"
+          />
+          <input
+            name="zip"
+            autoComplete="postal-code"
+            value={formData.zip}
+            onChange={(e) => handleChange("zip", e.target.value)}
+            placeholder="ZIP"
+          />
+          <input
+            name="country"
+            autoComplete="country-name"
+            value={formData.country}
+            onChange={(e) => handleChange("country", e.target.value)}
+            required
+            placeholder="Country"
+          />
+          <button type="submit">Submit</button>
         </form>
       </div>
     </main>
