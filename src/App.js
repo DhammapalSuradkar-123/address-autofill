@@ -1,5 +1,6 @@
 import React from "react";
-import AddressAutofill from "./pages/AddressAutofill";
+import AutoFillCheck from "./pages/autoFill/AutoFillCheck";
+// import AddressAutofill from "./pages/AddressAutofill";
 // import ReactSlick from "./pages/ReactSlick";
 // import Swiper from "./pages/Swiper";
 // import VideoPlayer from "./pages/VideoPlayer";
@@ -10,7 +11,8 @@ function App() {
       {/* <ReactSlick /> */}
       {/* <Swiper /> */}
       {/* <VideoPlayer /> */}
-      <AddressAutofill />
+      {/* <AddressAutofill /> */}
+      <AutoFillCheck />
     </>
   );
 }
