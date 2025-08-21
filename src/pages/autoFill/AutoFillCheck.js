@@ -24,7 +24,7 @@ const AutoFillCheck = () => {
             id="given-name"
             autoComplete="given-name"
             placeholder="First Name*"
-            value={address.firstname || ""}
+            defaultValue={address.firstname || ""}
             onChange={(e) => handleOnAddressChange('firstname', e.target.value?.trim?.())}
             />
 
@@ -34,7 +34,7 @@ const AutoFillCheck = () => {
             id="family-name"
             autoComplete="family-name"
             placeholder="Last Name*"
-            value={address.lastname || ""}
+            defaultValue={address.lastname || ""}
             onChange={(e) => handleOnAddressChange('lastname', e.target.value?.trim?.())}
             />
 
@@ -44,7 +44,7 @@ const AutoFillCheck = () => {
             id="tel"
             autoComplete="tel"
             placeholder="Mobile Number*"
-            value={address.telephone || ""}
+            defaultValue={address.telephone || ""}
             onChange={(e) => handleOnAddressChange('telephone', e.target.value?.trim?.())}
             />
 
@@ -54,7 +54,7 @@ const AutoFillCheck = () => {
             id="address-line1"
             autoComplete="address-line1"
             placeholder="Street/Road"
-            value={address.street || ""}
+            defaultValue={address.street || ""}
             onChange={(e) => handleOnAddressChange('street', e.target.value)}
             />
 
@@ -64,7 +64,7 @@ const AutoFillCheck = () => {
             id="postal-code"
             autoComplete="postal-code"
             placeholder="Zipcode*"
-            value={address.postcode || ""}
+            defaultValue={address.postcode || ""}
             onChange={(e) => handleOnAddressChange('postcode', e.target.value?.trim?.())}
             />
 
@@ -74,7 +74,7 @@ const AutoFillCheck = () => {
             id="address-level2"
             autoComplete="address-level2"
             placeholder="City*"
-            value={address.city || ""}
+            defaultValue={address.city || ""}
             onChange={(e) => handleOnAddressChange('city', e.target.value?.trim?.())}
             />
 
@@ -82,7 +82,7 @@ const AutoFillCheck = () => {
             id="address-level1"
             name="address-level1"
             autoComplete="address-level1"
-            value={address.state || ""}
+            defaultValue={address.state || ""}
             onChange={(e) => handleOnAddressChange("state", e.target.value)}
             >
             <option value="">Select State</option>
@@ -96,7 +96,7 @@ const AutoFillCheck = () => {
             id="country"
             name="country"
             autoComplete="country"
-            value={address.country || ""}
+            defaultValue={address.country || ""}
             onChange={(e) => handleOnAddressChange("country", e.target.value)}
             >
             <option value="">Select Country</option>
@@ -113,7 +113,7 @@ const AutoFillCheck = () => {
                   handleSubmit(event);
                 }}
               >
-               Save
+               Save -
               </button>
 
           </div>
