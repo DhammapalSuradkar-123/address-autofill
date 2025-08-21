@@ -25,7 +25,7 @@ const AddressForm = () => {
   return (
     <main>
       <div className="wrapper" style={{ margin: "100px" }}>
-        {/* <form onSubmit={handleSubmit} autoComplete="on">
+        <form onSubmit={handleSubmit} autoComplete="on">
           <div>
             <label htmlFor="address-line1" style={{display:"inline-block",width:"300px"}}>Address line</label>
             <input
@@ -92,8 +92,8 @@ const AddressForm = () => {
             <div style={{width: "300px"}} />
             <button type="submit">Save address</button>
           </div>
-        </form> */}
-        <form onSubmit={handleSubmit} autoComplete="on">
+        </form>
+        {/* <form onSubmit={handleSubmit} autoComplete="on">
           <input
             name="addressOne"
             autoComplete="address-line1"
@@ -133,7 +133,7 @@ const AddressForm = () => {
             placeholder="Country"
           />
           <button type="submit">Submit</button>
-        </form>
+        </form> */}
       </div>
     </main>
   );
