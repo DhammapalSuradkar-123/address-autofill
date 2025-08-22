@@ -20,6 +20,7 @@ const AutoFillCheck = () => {
       <div>
         <input
           type="text"
+          id="given-name"
           name="given-name"
           autoComplete="given-name"
           placeholder="First Name*"
@@ -29,6 +30,7 @@ const AutoFillCheck = () => {
 
         <input
           type="text"
+          id="family-name"
           name="family-name"
           autoComplete="family-name"
           placeholder="Last Name*"
@@ -38,6 +40,7 @@ const AutoFillCheck = () => {
 
         <input
           type="tel"
+          id="tel"
           name="tel"
           autoComplete="tel"
           placeholder="Mobile Number*"
@@ -47,6 +50,7 @@ const AutoFillCheck = () => {
 
         <input
           type="text"
+          id="address-line1"
           name="address-line1"
           autoComplete="address-line1"
           placeholder="Street/Road"
@@ -56,6 +60,7 @@ const AutoFillCheck = () => {
 
         <input
           type="text"
+          id="postal-code"
           name="postal-code"
           autoComplete="postal-code"
           placeholder="Zipcode*"
@@ -65,6 +70,7 @@ const AutoFillCheck = () => {
 
         <input
           type="text"
+          id="address-level2"
           name="address-level2"
           autoComplete="address-level2"
           placeholder="City*"
@@ -73,6 +79,7 @@ const AutoFillCheck = () => {
         />
 
         <select
+          id="address-level1"
           name="address-level1"
           autoComplete="address-level1"
           value={address.state}
@@ -86,7 +93,8 @@ const AutoFillCheck = () => {
         </select>
 
         <select
-          name="country"
+          id="country-name"
+          name="country-name"
           autoComplete="country-name"
           value={address.country}
           onChange={(e) => handleOnAddressChange("country", e.target.value)}
@@ -99,7 +107,7 @@ const AutoFillCheck = () => {
         </select>
 
         <button type="submit" className="btn btnPrimary">
-          Save -
+          Save
         </button>
       </div>
     </form>
