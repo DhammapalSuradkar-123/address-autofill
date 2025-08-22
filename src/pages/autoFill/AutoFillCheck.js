@@ -16,7 +16,7 @@ const AutoFillCheck = () => {
   };
 
   return (
-    <form autoComplete="on" onSubmit={handleSubmit}>
+    <form autoComplete="on">
       <div>
         <input
           type="text"
@@ -98,7 +98,7 @@ const AutoFillCheck = () => {
           <option value="AU">Australia</option>
         </select>
 
-        <button type="submit" className="btn btnPrimary">
+        <button type="submit" className="btn btnPrimary" onClick={handleSubmit}>
           Save
         </button>
       </div>
