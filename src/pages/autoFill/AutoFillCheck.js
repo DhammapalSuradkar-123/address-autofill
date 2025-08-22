@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
 
 const AutoFillCheck = () => {
-  const [address, setAddress] = useState({
-    firstname: "",
-    lastname: "",
-    telephone: "",
-    street: "",
-    postcode: "",
-    city: "",
-    state: "",
-    country: ""
-  });
+  const [address, setAddress] = useState({});
 
   const handleOnAddressChange = (name, value) => {
     setAddress((prev) => ({
