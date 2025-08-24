@@ -10,12 +10,13 @@ const AutoFillCheck = () => {
     }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log("Form Submitted", address);
   };
 
   return (
-    <form autoComplete="on" onSubmit={(e) => {e.preventDefault(); handleSubmit()}}>
+    <form autoComplete="on" onSubmit={handleSubmit}>
       <div>
         <input
           type="text"
